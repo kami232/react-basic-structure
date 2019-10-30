@@ -1,22 +1,13 @@
-import React from 'react';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+// 路由配置
+import React from 'react'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
-import Home from '../views/Home';
-import Detail from '../views/Detail';
-import Frame from "../layouts/Frame";
+import Home from '../page/home'
 
 const routes = (
     <BrowserRouter>
-        <Route path="/" render={() =>
-            <Frame>
-                <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/detail/:id" component={Detail}/>
-                </Switch>
-            </Frame>
-        }>
-        </Route>
+        <Route path='/' component={Home}/>
     </BrowserRouter>
-);
+)
 
-export default routes;
+export default routes
